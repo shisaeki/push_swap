@@ -6,7 +6,7 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:28:06 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/16 23:22:22 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 01:49:26 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct	s_node
 t_node	*create_node(int data, int rank);
 void	insert_at_end(t_node **head, int data, int rank);
 //push_swap_utils
+int		get_stack_size(t_node **stack);
 void	init_stack(t_node **node, int *arr, int *sorted, int len);
 void	print_stack(t_node *node);
 void	print_stacks(t_node *node_a, t_node *node_b);
@@ -55,7 +56,11 @@ void	rra(t_node **node_a, t_node **node_b);
 void	rrb(t_node **node_a, t_node **node_b);
 void	rrr(t_node **node_a, t_node **node_b);
 //push_swap
+void	sort_stack_b_two(t_node **stack_a, t_node **stack_b);
+void	sort_stack_b_three(t_node **stack_a, t_node **stack_b);
 void	push_swap_three_or_less(t_node **stack_a, t_node **stack_b, int size);
 void	push_swap_six_or_less(t_node **stack_a, t_node **stack_b, int size);
+void	push_swap(t_node **stack_a, t_node **stack_b, int size);
+//void	push_swap_test(t_node **stack_a, t_node **stack_b, int size);
 
 #endif

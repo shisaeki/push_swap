@@ -6,7 +6,7 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:30:13 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/17 00:18:07 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 01:49:10 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,8 @@ int	main(int argc, char **argv)
 	node_b = NULL;
 	init_stack(&node_a, arr, sorted, argc - 1);
 	print_stacks(node_a, node_b);
-	if (argc - 1 < 4)
-		push_swap_three_or_less(&node_a, &node_b, argc - 1);
-	else if (argc - 1 < 7)
-		push_swap_six_or_less(&node_a, &node_b, argc - 1);
+	push_swap(&node_a, &node_b, argc - 1);
+	//push_swap_test(&node_a, &node_b, argc - 1);
 
 	free(arr);
 	free(sorted);

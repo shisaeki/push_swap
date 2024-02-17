@@ -6,11 +6,28 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:31:56 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/13 19:03:33 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 01:21:04 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	get_stack_size(t_node **stack)
+{
+	int		count;
+	t_node	*tmp;
+
+	if (*stack == NULL)
+		return (0);
+	count = 0;
+	tmp = *stack;
+	while (tmp != NULL)
+	{
+		count++;
+		tmp = tmp->next;
+	}
+	return (count);
+}
 
 void	init_stack(t_node **node, int *arr, int *sorted, int len)
 {
