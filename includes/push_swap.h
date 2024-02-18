@@ -6,13 +6,14 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:28:06 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/18 16:06:08 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 16:15:05 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>

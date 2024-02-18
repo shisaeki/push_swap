@@ -6,7 +6,7 @@
 #    By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/17 00:18:46 by shinsaeki         #+#    #+#              #
-#    Updated: 2024/02/18 16:00:24 by shinsaeki        ###   ########.fr        #
+#    Updated: 2024/02/18 16:13:14 by shinsaeki        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRCS = main.c \
 TARGET = push_swap_exec
 
 all: $(TARGET)
+$(TARGET): $(SRCS)
 	$(CC) -o $(TARGET) -I $(INCLUDES) $(SRCS)
 clean:
 	rm -f $(TARGET)
