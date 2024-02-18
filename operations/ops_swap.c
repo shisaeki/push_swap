@@ -6,7 +6,7 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 11:18:28 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/18 15:26:15 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 16:05:14 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,25 +26,25 @@ void	swap(t_node** stack)
 	}
 }
 
-void	sa(t_node **node_a, t_node **node_b)
+void	sa(t_node **stack_a, t_node **stack_b)
 {
-	swap(node_a);
+	swap(stack_a);
 	printf("%s", "########## op: sa ##########\n\n");
-	print_stacks(*node_a, *node_b);
+	print_stacks(*stack_a, *stack_b);
 }
 
 
-void	sb(t_node **node_a, t_node **node_b)
+void	sb(t_node **stack_a, t_node **stack_b)
 {
-	swap(node_b);
+	swap(stack_b);
 	printf("%s", "########## op: sb ##########\n\n");
-	print_stacks(*node_a, *node_b);
+	print_stacks(*stack_a, *stack_b);
 }
 
-void	ss(t_node **node_a, t_node **node_b)
+void	ss(t_node **stack_a, t_node **stack_b)
 {
-	swap(node_a);
-	swap(node_b);
+	swap(stack_a);
+	swap(stack_b);
 	printf("%s", "########## op: ss ##########\n\n");
-	print_stacks(*node_a, *node_b);
+	print_stacks(*stack_a, *stack_b);
 }

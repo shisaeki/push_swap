@@ -6,7 +6,7 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:30:13 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/18 15:26:45 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 15:52:30 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,15 @@ int	main(int argc, char **argv)
 	sorted = (int *)malloc(sizeof(int) * (argc - 1));
 	for (int i = 0; i < argc - 1; i++)
 	{
-		arr[i] = atoi(argv[i + 1]);
-		sorted[i] = atoi(argv[i + 1]);
+		arr[i] = ft_atoi(argv[i + 1]);
+		sorted[i] = ft_atoi(argv[i + 1]);
 	}
 	bubble_sort(sorted, argc - 1);
-
 	node_a = NULL;
 	node_b = NULL;
 	init_stack(&node_a, arr, sorted, argc - 1);
 	print_stacks(node_a, node_b);
-	push_swap(&node_a, &node_b, argc - 1);
-	//push_swap_test(&node_a, &node_b, argc - 1);
-
+	push_swap_seven_or_more(&node_a, &node_b, argc - 1);
 	free(arr);
 	free(sorted);
 }

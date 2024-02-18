@@ -6,7 +6,7 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 00:27:08 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/18 15:30:45 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 16:00:02 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ void	push_higher_from_b_to_a(t_node **stack_a, t_node **stack_b, int size)
 	count = 0;
 	while (count < len)
 	{
-//		printf("stack-rank: %d count:%d min:%d min+size:%d\n", (*stack_b)->rank, count, min_rank, min_rank + size);
 		if ((*stack_b)->rank >= min_rank + size)
 		{
 			pa(stack_a, stack_b);
@@ -101,7 +100,7 @@ void	divide_and_sort(t_node **stack_a, t_node **stack_b, int size)
 	divide_and_sort(stack_a, stack_b, size - size / 2);
 }
 
-void	push_swap(t_node **stack_a, t_node **stack_b, int size)
+void	push_swap_seven_or_more(t_node **stack_a, t_node **stack_b, int size)
 {
 	push_smaller_from_a_to_b(stack_a, stack_b, size / 2);
 	divide_and_sort(stack_a, stack_b, size / 2);

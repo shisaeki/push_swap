@@ -6,7 +6,7 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 12:46:11 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/18 15:25:56 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 16:01:52 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ void	push(t_node **source, t_node **target)
 	}
 }
 
-void	pa(t_node **node_a, t_node **node_b)
+void	pa(t_node **stack_a, t_node **stack_b)
 {
-	push(node_b, node_a);
+	push(stack_b, stack_a);
 	printf("%s", "########## op: pa ##########\n");
-	print_stacks(*node_a, *node_b);
+	print_stacks(*stack_a, *stack_b);
 }
 
-void	pb(t_node **node_a, t_node **node_b)
+void	pb(t_node **stack_a, t_node **stack_b)
 {
-	push(node_a, node_b);
+	push(stack_a, stack_b);
 	printf("%s", "########## op: pb ##########\n");
-	print_stacks(*node_a, *node_b);
+	print_stacks(*stack_a, *stack_b);
 }

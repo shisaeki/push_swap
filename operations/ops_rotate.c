@@ -6,7 +6,7 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 13:05:57 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/18 15:26:11 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 16:04:20 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,24 +29,24 @@ void rotate(t_node** stack)
 	}
 }
 
-void	ra(t_node **node_a, t_node **node_b)
+void	ra(t_node **stack_a, t_node **stack_b)
 {
-	rotate(node_a);
+	rotate(stack_a);
 	printf("%s", "########## op: ra ##########\n\n");
-	print_stacks(*node_a, *node_b);
+	print_stacks(*stack_a, *stack_b);
 }
 
-void	rb(t_node **node_a, t_node **node_b)
+void	rb(t_node **stack_a, t_node **stack_b)
 {
-	rotate(node_b);
+	rotate(stack_b);
 	printf("%s", "########## op: rb ##########\n\n");
-	print_stacks(*node_a, *node_b);
+	print_stacks(*stack_a, *stack_b);
 }
 
-void	rr(t_node **node_a, t_node **node_b)
+void	rr(t_node **stack_a, t_node **stack_b)
 {
-	rotate(node_a);
-	rotate(node_b);
+	rotate(stack_a);
+	rotate(stack_b);
 	printf("%s", "########## op: rr ##########\n\n");
-	print_stacks(*node_a, *node_b);
+	print_stacks(*stack_a, *stack_b);
 }

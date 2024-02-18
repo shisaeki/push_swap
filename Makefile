@@ -6,14 +6,17 @@
 #    By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/17 00:18:46 by shinsaeki         #+#    #+#              #
-#    Updated: 2024/02/18 15:39:38 by shinsaeki        ###   ########.fr        #
+#    Updated: 2024/02/18 16:00:24 by shinsaeki        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
 
 PUSH_SWAP = ./push_swap/
 OPERATIONS = ./operations/
 UTILS = ./utils/
-INCLUDES = ./includes/
+INCLUDES = ./includes/push_swap.h
 
 SRCS = main.c \
 	$(OPERATIONS)ops_swap.c \
@@ -26,11 +29,12 @@ SRCS = main.c \
 	$(PUSH_SWAP)push_swap_utils.c \
 	$(UTILS)doubly_linked_list.c \
 	$(UTILS)sort_utils.c \
+	$(UTILS)ft_utils.c \
 
 TARGET = push_swap_exec
 
-all:
-	gcc -o $(TARGET) $(SRCS)
+all: $(TARGET)
+	$(CC) -o $(TARGET) -I $(INCLUDES) $(SRCS)
 clean:
 	rm -f $(TARGET)
 re:

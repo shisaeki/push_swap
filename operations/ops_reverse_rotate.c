@@ -6,7 +6,7 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 13:13:50 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/18 15:26:07 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 16:03:23 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,24 +29,24 @@ void reverse_rotate(t_node **stack)
 	}
 }
 
-void	rra(t_node **node_a, t_node **node_b)
+void	rra(t_node **stack_a, t_node **stack_b)
 {
-	reverse_rotate(node_a);
+	reverse_rotate(stack_a);
 	printf("%s", "########## op: rra ##########\n\n");
-	print_stacks(*node_a, *node_b);
+	print_stacks(*stack_a, *stack_b);
 }
 
-void	rrb(t_node **node_a, t_node **node_b)
+void	rrb(t_node **stack_a, t_node **stack_b)
 {
-	reverse_rotate(node_b);
+	reverse_rotate(stack_b);
 	printf("%s", "########## op: rrb ##########\n\n");
-	print_stacks(*node_a, *node_b);
+	print_stacks(*stack_a, *stack_b);
 }
 
-void	rrr(t_node **node_a, t_node **node_b)
+void	rrr(t_node **stack_a, t_node **stack_b)
 {
-	reverse_rotate(node_a);
-	reverse_rotate(node_b);
+	reverse_rotate(stack_a);
+	reverse_rotate(stack_b);
 	printf("%s", "########## op: rrr ##########\n\n");
-	print_stacks(*node_a, *node_b);
+	print_stacks(*stack_a, *stack_b);
 }
