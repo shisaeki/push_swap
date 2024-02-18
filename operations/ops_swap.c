@@ -1,52 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_ops_rotate.c                             :+:      :+:    :+:   */
+/*   ops_swap.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 13:05:57 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/15 11:59:30 by shinsaeki        ###   ########.fr       */
+/*   Created: 2024/02/13 11:18:28 by shinsaeki         #+#    #+#             */
+/*   Updated: 2024/02/18 15:26:15 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-void rotate(t_node** stack)
+void	swap(t_node** stack)
 {
 	if (*stack && (*stack)->next)
 	{
 		t_node* first = *stack;
-		while (first->next)
-		{
-			first = first->next;
-		}
-		first->next = *stack;
-		(*stack)->prev = first;
-		*stack = (*stack)->next;
-		(*stack)->prev->next = NULL;
-		(*stack)->prev = NULL;
+		t_node* second = (*stack)->next;
+		first->next = second->next;
+		second->prev = first->prev;
+		if (first->next) first->next->prev = first;
+		second->next = first;
+		*stack = second;
 	}
 }
 
-void	ra(t_node **node_a, t_node **node_b)
+void	sa(t_node **node_a, t_node **node_b)
 {
-	rotate(node_a);
-	printf("%s", "########## op: ra ##########\n\n");
+	swap(node_a);
+	printf("%s", "########## op: sa ##########\n\n");
 	print_stacks(*node_a, *node_b);
 }
 
-void	rb(t_node **node_a, t_node **node_b)
+
+void	sb(t_node **node_a, t_node **node_b)
 {
-	rotate(node_b);
-	printf("%s", "########## op: rb ##########\n\n");
+	swap(node_b);
+	printf("%s", "########## op: sb ##########\n\n");
 	print_stacks(*node_a, *node_b);
 }
 
-void	rr(t_node **node_a, t_node **node_b)
+void	ss(t_node **node_a, t_node **node_b)
 {
-	rotate(node_a);
-	rotate(node_b);
-	printf("%s", "########## op: rr ##########\n\n");
+	swap(node_a);
+	swap(node_b);
+	printf("%s", "########## op: ss ##########\n\n");
 	print_stacks(*node_a, *node_b);
 }

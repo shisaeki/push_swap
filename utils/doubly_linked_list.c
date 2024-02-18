@@ -6,11 +6,11 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 14:45:11 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/08 18:58:29 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 15:34:44 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 t_node	*create_node(int data, int rank)
 {

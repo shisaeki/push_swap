@@ -6,11 +6,11 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 00:27:08 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/18 01:50:12 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 15:30:45 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	push_smaller_from_a_to_b(t_node **stack_a, t_node **stack_b, int size)
 {

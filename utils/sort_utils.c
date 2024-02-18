@@ -6,11 +6,11 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 16:55:04 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/16 22:53:27 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 15:33:33 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	bubble_sort(int *arr, int len)
 {

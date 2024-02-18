@@ -6,11 +6,11 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 22:40:33 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/16 23:22:06 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 15:30:49 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void	sort_stack_four(t_node **stack_a, t_node **stack_b)
 {

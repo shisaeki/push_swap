@@ -6,11 +6,11 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:31:56 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/18 01:21:04 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 15:30:57 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int	get_stack_size(t_node **stack)
 {

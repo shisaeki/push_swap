@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_ops_reverse_rotate.c                     :+:      :+:    :+:   */
+/*   ops_reverse_rotate.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 13:13:50 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/13 19:00:07 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 15:26:07 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 void reverse_rotate(t_node **stack)
 {

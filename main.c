@@ -6,11 +6,11 @@
 /*   By: shinsaeki <shinsaeki@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:30:13 by shinsaeki         #+#    #+#             */
-/*   Updated: 2024/02/18 01:49:10 by shinsaeki        ###   ########.fr       */
+/*   Updated: 2024/02/18 15:26:45 by shinsaeki        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "includes/push_swap.h"
 
 int	main(int argc, char **argv)
 {
